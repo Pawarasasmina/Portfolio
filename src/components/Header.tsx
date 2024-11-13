@@ -18,24 +18,23 @@ export default function Header() {
   };
 
   return (
-    <motion.header
-      className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700"
-    >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-xl font-bold"
-          >
-            <motion.span
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-primary-light to-blue-400 dark:from-primary-dark dark:to-blue-300 bg-clip-text text-transparent"
-            >
-              Pawara
-            </motion.span>
-          </motion.div>
+    <motion.header className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-between items-center h-16">
+      <motion.div
+  initial={{ x: -50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="text-xl font-bold"
+>
+  <motion.img
+    whileHover={{ scale: 1.05 }}
+    src="../src/assets/sign.png" // Replace with the path to your image
+    alt="Your Signature Photo"
+    className="h-12 w-40 rounded-full" // Adjust the size and shape as needed
+  />
+</motion.div>
+
 
         {/* Desktop Navigation */}
         <motion.div 
