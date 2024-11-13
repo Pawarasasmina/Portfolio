@@ -88,7 +88,7 @@ export default function Hero() {
             {/* Download CV Button */}
             <motion.div variants={itemVariants} className="mb-12">
             <a
-  href="../src/assets/MY_CV_FINAL.pdf"
+  href="./assets/MY_CV_FINAL.pdf"
   download="Pawara_Sasmina_CV.pdf"
   className="inline-block text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark px-6 py-3 rounded-lg transition duration-200
              hover:bg-primary-light hover:border-primary-light hover:text-white 
