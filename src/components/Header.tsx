@@ -49,6 +49,7 @@ export default function Header() {
             <a href="#education" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Education</a>
             <a href="#skills" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Skills</a>
             <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Projects</a>
+            <a href="#Services" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Services </a>
             <a href="#Contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Contact</a>
 
             <ThemeToggle />
@@ -114,6 +115,15 @@ export default function Header() {
               onClick={handleMenuItemClick}
             >
               Projects
+            </Link>
+            <Link
+              to="Services"
+              smooth={true}
+              duration={500}
+              className="block text-xl hover:text-primary-light dark:hover:text-primary-dark"
+              onClick={handleMenuItemClick}
+            >
+              Services We Provide
             </Link>
             <Link
               to="Contact"

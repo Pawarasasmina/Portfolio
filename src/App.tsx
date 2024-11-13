@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import { motion } from 'framer-motion';
 import WhoAmI from './components/WhoAmI';
 import Contact from './components/Contact';
+import Services from './components/services';
 
 function App() {
   return (
@@ -30,10 +31,15 @@ function App() {
         <Projects />
       </section>
     
+      <section id="Services">
+      <Services/>
+      </section>
 
       <section id="Contact">
       <Contact/>
       </section>
+
+      
 
       
 
@@ -43,7 +49,7 @@ function App() {
           viewport={{ once: true }}
           className="bg-white dark:bg-gray-900 py-8 text-center text-gray-600 dark:text-gray-400 transition-colors duration-200"
         >
-          <p>© 2024 Your Name. All rights reserved.</p>
+          <p>© 2024 Made by Pawara. </p>
         </motion.footer>
       </main>
     </div>

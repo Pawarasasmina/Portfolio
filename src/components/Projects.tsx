@@ -1,36 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Star } from 'lucide-react';
 import type { Project } from '../types';
 
 const projects: Project[] = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack MERN application with authentication, payment integration, and admin dashboard.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com/yourusername/ecommerce',
-    live: 'https://your-ecommerce.com',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=400&h=300'
+    title: 'Pixel Plaza',
+    description: 'Developed a web-based shopping mall system to improve the shopping experience beyond a normal e-commerce platform.',
+    tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JWT', 'Bcrypt', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Pixel-Plaza---Online-Shopping-Mall.git',
+    image: 'https://path-to-your-image/pixel-plaza.jpg'
   },
   {
-    title: 'Task Management App',
-    description: 'Real-time task management system with collaborative features and notifications.',
-    tech: ['React', 'Socket.io', 'Express', 'MongoDB'],
-    github: 'https://github.com/yourusername/task-manager',
-    live: 'https://your-taskapp.com',
-    image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=400&h=300'
+    title: 'Online Healthcare System',
+    description: 'Developed a web-based e-channeling and medical details sharing system.',
+    tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Smart_HealthCare_System.git',
+    image: 'https://path-to-your-image/healthcare-system.jpg'
   },
   {
-    title: 'Portfolio Website',
-    description: 'Modern portfolio website built with React and Framer Motion for smooth animations.',
-    tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-    github: 'https://github.com/yourusername/portfolio',
-    live: 'https://your-portfolio.com',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400&h=300'
+    title: 'Path Finder',
+    description: 'A cross-platform mobile application to alleviate urban traffic congestion.',
+    tech: ['Flutter', 'Dart', 'Android Studio'],
+    github: 'https://github.com/Pawarasasmina/Path-Finder.git',
+    image: 'https://path-to-your-image/path-finder.jpg'
+  },
+  {
+    title: 'Online Seat Booking System',
+    description: 'Developed a web-based Highway bus ticket booking system.',
+    tech: ['MERN Stack', 'Vite', 'Bootstrap CSS', 'JWT', 'Bcrypt', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Online-seat-booking-system.git',
+    image: 'https://path-to-your-image/seat-booking.jpg'
+  },
+  {
+    title: 'Lane Runner',
+    description: 'Developed a simple mobile game for Android.',
+    tech: ['Kotlin', 'XML', 'Android Studio'],
+    github: 'https://github.com/Pawarasasmina/LaneRunner.git',
+    image: 'https://path-to-your-image/lane-runner.jpg'
+  },
+  {
+    title: 'Address Book',
+    description: 'Simple Android mobile application for managing addresses of people.',
+    tech: ['Kotlin', 'XML', 'SQLite', 'Android Studio'],
+    github: 'https://github.com/Pawarasasmina/Address-Book.git',
+    image: '../src/assets/adressbook.jpeg'
+  },
+  {
+    title: 'Sky-On-Eye',
+    description: 'Web-based online movie ticket booking system.',
+    tech: ['PHP', 'HTML', 'JavaScript', 'CSS'],
+    github: 'https://github.com/Pawarasasmina/Sky-On-Eye.git',
+    image: 'https://path-to-your-image/sky-on-eye.jpg'
+  },
+  {
+    title: 'Online Music Store',
+    description: 'Developed a web-based music listening and purchasing system.',
+    tech: ['Java', 'Bootstrap CSS', 'OOP'],
+    github: 'https://github.com/Pawarasasmina/Online-Music-Store.git',
+    image: 'https://path-to-your-image/music-store.jpg'
+  },
+  {
+    title: 'Fitness Master',
+    description: 'CRUD operations for online nutritional and fitness planning with front and back-end interactions.',
+    tech: ['PHP', 'HTML', 'JavaScript', 'CSS'],
+    github: 'https://github.com/Pawarasasmina/Project-06---Fitness-Master.git',
+    image: 'https://path-to-your-image/fitness-master.jpg'
   }
 ];
 
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  // Show only the first 3 projects initially, show all if "Show More" is clicked
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +88,7 @@ export default function Projects() {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100 }}
+            transition={{ type: 'spring', stiffness: 100 }}
             className="inline-block p-2 bg-primary-light/10 dark:bg-primary-dark/10 rounded-lg mb-4"
           >
             <Star className="w-6 h-6 text-primary-light dark:text-primary-dark" />
@@ -54,12 +98,25 @@ export default function Projects() {
             Explore some of my recent work and personal projects
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
+
+        {!showAll && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-block text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark px-6 py-3 rounded-lg transition duration-200
+                         hover:bg-primary-light hover:border-primary-light hover:text-white 
+                         dark:hover:bg-primary-dark dark:hover:border-primary-dark dark:hover:text-white"
+            >
+              Show More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -118,17 +175,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           >
             <Github className="w-5 h-5 mr-1" />
             Code
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-          >
-            <ExternalLink className="w-5 h-5 mr-1" />
-            Live Demo
           </motion.a>
         </div>
       </div>
