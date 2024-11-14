@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
+import sign from '../assets/sign.png';
 
 interface SocialLinkProps {
   href: string;
@@ -29,7 +30,7 @@ export default function Header() {
 >
   <motion.img
     whileHover={{ scale: 1.05 }}
-    src="/assets/sign.png" // Replace with the path to your image
+    src={sign}// Replace with the path to your image
     alt="Your Signature Photo"
     className="h-12 w-40 rounded-full" // Adjust the size and shape as needed
   />

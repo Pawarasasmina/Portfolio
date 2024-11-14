@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Star } from 'lucide-react';
 import type { Project } from '../types';
+import adressbook from '../assets/adressbook.jpeg';
 
 const projects: Project[] = [
   {
@@ -44,7 +45,7 @@ const projects: Project[] = [
     description: 'Simple Android mobile application for managing addresses of people.',
     tech: ['Kotlin', 'XML', 'SQLite', 'Android Studio'],
     github: 'https://github.com/Pawarasasmina/Address-Book.git',
-    image: '../src/assets/adressbook.jpeg'
+    image: adressbook,
   },
   {
     title: 'Sky-On-Eye',

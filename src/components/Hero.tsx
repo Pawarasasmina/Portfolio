@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Database, Globe, Sparkles } from 'lucide-react';
+import photo from '../assets/photo.png';
+import cv from '../assets/MY_CV_FINAL.pdf';
 
 interface AnimatedSkillProps {
   icon: React.ReactNode;
@@ -88,7 +90,7 @@ export default function Hero() {
             {/* Download CV Button */}
             <motion.div variants={itemVariants} className="mb-12">
             <a
-  href="../src/assets/MY_CV_FINAL.pdf"
+  href={cv}
   download="Pawara_Sasmina_CV.pdf"
   className="inline-block text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark px-6 py-3 rounded-lg transition duration-200
              hover:bg-primary-light hover:border-primary-light hover:text-white 
@@ -117,7 +119,7 @@ export default function Hero() {
               className="relative inline-block"
             >
               <img
-                src="/assets/photo.png" // Replace with actual asset path
+                src={photo} // Replace with actual asset path
                 alt="Profile"
                 className="w-full h-auto max-w- mx-auto " // Remove `rounded-full`
               />
