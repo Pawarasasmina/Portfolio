@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Database, Globe, Sparkles } from 'lucide-react';
-import photo from '../assets/photo.png';
+import photo from '../assets/PAWARA1.png';
 import photo2 from '../assets/photo2.png';
 import cv from '../assets/MY_CV_FINAL.pdf';
 
@@ -122,7 +122,7 @@ export default function Hero() {
               <img
                 src={photo} // Replace with actual asset path
                 alt="Profile"
-                className="w-full h-auto max-w- mx-auto " // Remove `rounded-full`
+                className="w-96 max-w-full mx-auto" // Remove `rounded-full`
               />
             </motion.div>
           </div>
