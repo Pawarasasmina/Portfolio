@@ -117,7 +117,7 @@ export default function Hero() {
               className="relative inline-block"
             >
               <img
-                src="../src/assets/photo.png" // Replace with actual asset path
+                src="./assets/photo.png" // Replace with actual asset path
                 alt="Profile"
                 className="w-full h-auto max-w- mx-auto " // Remove `rounded-full`
               />
