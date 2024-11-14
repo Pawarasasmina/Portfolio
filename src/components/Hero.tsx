@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Database, Globe, Sparkles } from 'lucide-react';
 import photo from '../assets/photo.png';
+import photo2 from '../assets/photo2.png';
 import cv from '../assets/MY_CV_FINAL.pdf';
 
 interface AnimatedSkillProps {
@@ -119,7 +120,7 @@ export default function Hero() {
               className="relative inline-block"
             >
               <img
-                src={photo} // Replace with actual asset path
+                src={photo2} // Replace with actual asset path
                 alt="Profile"
                 className="w-full h-auto max-w- mx-auto " // Remove `rounded-full`
               />
