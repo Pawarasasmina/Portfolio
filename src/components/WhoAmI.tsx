@@ -26,7 +26,7 @@ export default function WhoAmI() {
             className="w-1/2 flex justify-center"
           >
             <img
-              src="../src/assets/who am i.png" // Adjust the path as needed
+              src="/assets/who am i.png" // Adjust the path as needed
               alt="Profile"
               className="rounded-full w-48 h-48 object-cover shadow-lg"
             />
