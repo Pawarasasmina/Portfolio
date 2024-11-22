@@ -12,8 +12,8 @@ const skillsData: Skill[] = [
     category: 'Frontend',
     skills: [
       { name: 'React', level: 90 },
-      { name: 'Tailwind CSS', level: 85 },
       { name: 'JavaScript', level: 80 },
+      { name: 'TypeScript', level: 80 },
     ],
   },
   {
@@ -25,11 +25,11 @@ const skillsData: Skill[] = [
     ],
   },
   {
-    category: 'Other Skills',
+    category: 'Tools',
     skills: [
       { name: 'Git & GitHub', level: 80 },
-      { name: 'Docker', level: 70 },
-      { name: 'Linux', level: 65 },
+      { name: 'VsCode', level: 90 },
+      { name: 'Linux', level: 45 },
     ],
   },
 ];

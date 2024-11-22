@@ -49,7 +49,7 @@ function App() {
           viewport={{ once: true }}
           className="bg-white dark:bg-gray-900 py-8 text-center text-gray-600 dark:text-gray-400 transition-colors duration-200"
         >
-          <p>© 2024 Made by Pawara. </p>
+          <p>© 2024 by Pawara Sasmina. </p>
         </motion.footer>
       </main>
     </div>

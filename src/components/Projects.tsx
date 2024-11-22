@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Github, ExternalLink, Star } from 'lucide-react';
 import type { Project } from '../types';
 import adressbook from '../assets/adressbook.jpeg';
+import pathfinder from '../assets/pathfinder.png';
 
 const projects: Project[] = [
   {
@@ -24,7 +25,7 @@ const projects: Project[] = [
     description: 'A cross-platform mobile application to alleviate urban traffic congestion.',
     tech: ['Flutter', 'Dart', 'Android Studio'],
     github: 'https://github.com/Pawarasasmina/Path-Finder.git',
-    image: 'https://path-to-your-image/path-finder.jpg'
+    image: pathfinder,
   },
   {
     title: 'Online Seat Booking System',
