@@ -59,7 +59,7 @@ const Contact = () => {
 
         <div className="flex flex-wrap justify-center gap-4 sm:flex-row sm:space-x-6 mb-8">
   <motion.a
-    href="tel:+94123456789"
+    href="tel:+94775211771"
     className="flex flex-col items-center text-xl text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark"
     whileHover={{ scale: 1.1 }}
   >
