@@ -23,7 +23,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Using EmailJS to send the email
-    emailjs.sendForm('service_r6r9dwi', 'template_vxfiirk', e.target as HTMLFormElement, 'YOUR_USER_ID')
+    emailjs.sendForm('service_r6r9dwi', 'template_9w0wuic', e.target as HTMLFormElement, 'AjuF7Kzd1C57NZ8Hn')
       .then(() => {
         setIsSent(true);
         setFormData({ name: '', email: '', message: '' });
@@ -57,43 +57,44 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="flex justify-center space-x-6 mb-8">
-          <motion.a
-            href="tel:+94123456789"
-            className="text-xl text-gray-600 dark:text-gray-300 flex items-center space-x-2 hover:text-primary-light dark:hover:text-primary-dark"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Phone className="w-6 h-6" />
-            <span>Call Me</span>
-          </motion.a>
+        <div className="flex flex-wrap justify-center gap-4 sm:flex-row sm:space-x-6 mb-8">
+  <motion.a
+    href="tel:+94123456789"
+    className="flex flex-col items-center text-xl text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark"
+    whileHover={{ scale: 1.1 }}
+  >
+    <Phone className="w-10 h-10 mb-2" />
+    <span>Call Me</span>
+  </motion.a>
 
-          <motion.a
-            href="mailto:pawarasasmina1@gmail.com"
-            className="text-xl text-gray-600 dark:text-gray-300 flex items-center space-x-2 hover:text-primary-light dark:hover:text-primary-dark"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Mail className="w-6 h-6" />
-            <span>Email Me</span>
-          </motion.a>
+  <motion.a
+    href="mailto:pawarasasmina1@gmail.com"
+    className="flex flex-col items-center text-xl text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark"
+    whileHover={{ scale: 1.1 }}
+  >
+    <Mail className="w-10 h-10 mb-2" />
+    <span>Email Me</span>
+  </motion.a>
 
-          <motion.a
-            href="https://github.com/Pawarasasmina"
-            className="text-xl text-gray-600 dark:text-gray-300 flex items-center space-x-2 hover:text-primary-light dark:hover:text-primary-dark"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Github className="w-6 h-6" />
-            <span>GitHub</span>
-          </motion.a>
+  <motion.a
+    href="https://github.com/Pawarasasmina"
+    className="flex flex-col items-center text-xl text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark"
+    whileHover={{ scale: 1.1 }}
+  >
+    <Github className="w-10 h-10 mb-2" />
+    <span>GitHub</span>
+  </motion.a>
 
-          <motion.a
-            href="https://linkedin.com/in/pawarasasmina"
-            className="text-xl text-gray-600 dark:text-gray-300 flex items-center space-x-2 hover:text-primary-light dark:hover:text-primary-dark"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Linkedin className="w-6 h-6" />
-            <span>LinkedIn</span>
-          </motion.a>
-        </div>
+  <motion.a
+    href="https://linkedin.com/in/pawarasasmina"
+    className="flex flex-col items-center text-xl text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark"
+    whileHover={{ scale: 1.1 }}
+  >
+    <Linkedin className="w-10 h-10 mb-2" />
+    <span>LinkedIn</span>
+  </motion.a>
+</div>
+
 
         <motion.form
           initial={{ opacity: 0, y: 20 }}
@@ -105,45 +106,51 @@ const Contact = () => {
           <div className="flex flex-col">
             <label className="text-lg text-gray-600 dark:text-gray-300">Name</label>
             <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 mt-2 text-gray-900 dark:text-white"
-              required
-            />
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 mt-2 text-gray-900 dark:text-gray-200 bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+  required
+/>
           </div>
 
           <div className="flex flex-col">
             <label className="text-lg text-gray-600 dark:text-gray-300">Email</label>
             <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 mt-2 text-gray-900 dark:text-white"
-              required
-            />
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 mt-2 text-gray-900 dark:text-gray-200 bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+  required
+/>
           </div>
 
           <div className="flex flex-col">
             <label className="text-lg text-gray-600 dark:text-gray-300">Message</label>
             <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 mt-2 text-gray-900 dark:text-white"
-              rows={5}
-              required
-            />
+  name="message"
+  value={formData.message}
+  onChange={handleChange}
+  className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 mt-2 text-gray-900 dark:text-gray-200 bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+  rows={5}
+  required
+/>
+
           </div>
 
-          <button
-            type="submit"
-            className="bg-primary-light dark:bg-primary-dark text-white px-6 py-3 rounded-lg mt-4 hover:bg-primary-light/90 dark:hover:bg-primary-dark/90 transition"
-          >
-            Send Message
-          </button>
+          <div className="flex justify-center items-center mt-8">
+  <button
+    type="submit"
+    className="inline-block text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark px-6 py-3 rounded-lg transition duration-200
+            hover:bg-primary-light hover:border-primary-light hover:text-white 
+            dark:hover:bg-primary-dark dark:hover:border-primary-dark dark:hover:text-white"
+  >
+    Send Message
+  </button>
+</div>
+
         </motion.form>
 
         {isSent && (
