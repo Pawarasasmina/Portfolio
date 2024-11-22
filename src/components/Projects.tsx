@@ -4,6 +4,10 @@ import { Github, ExternalLink, Star } from 'lucide-react';
 import type { Project } from '../types';
 import adressbook from '../assets/adressbook.jpeg';
 import pathfinder from '../assets/pathfinder.png';
+import pixelplaza from '../assets/pixelplasa.png';
+import healthcare from '../assets/healthcare.png';
+import highway from '../assets/highway.png';
+import lanerunner from '../assets/lanerunner.png';
 
 const projects: Project[] = [
   {
@@ -11,14 +15,14 @@ const projects: Project[] = [
     description: 'Developed a web-based shopping mall system to improve the shopping experience beyond a normal e-commerce platform.',
     tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JWT', 'Bcrypt', 'JavaScript'],
     github: 'https://github.com/Pawarasasmina/Pixel-Plaza---Online-Shopping-Mall.git',
-    image: 'https://path-to-your-image/pixel-plaza.jpg'
+    image: pixelplaza,
   },
   {
     title: 'Online Healthcare System',
     description: 'Developed a web-based e-channeling and medical details sharing system.',
     tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JavaScript'],
     github: 'https://github.com/Pawarasasmina/Smart_HealthCare_System.git',
-    image: 'https://path-to-your-image/healthcare-system.jpg'
+    image: healthcare,
   },
   {
     title: 'Path Finder',
@@ -32,14 +36,14 @@ const projects: Project[] = [
     description: 'Developed a web-based Highway bus ticket booking system.',
     tech: ['MERN Stack', 'Vite', 'Bootstrap CSS', 'JWT', 'Bcrypt', 'JavaScript'],
     github: 'https://github.com/Pawarasasmina/Online-seat-booking-system.git',
-    image: 'https://path-to-your-image/seat-booking.jpg'
+    image: highway,
   },
   {
     title: 'Lane Runner',
     description: 'Developed a simple mobile game for Android.',
     tech: ['Kotlin', 'XML', 'Android Studio'],
     github: 'https://github.com/Pawarasasmina/LaneRunner.git',
-    image: 'https://path-to-your-image/lane-runner.jpg'
+    image:lanerunner,
   },
   {
     title: 'Address Book',
