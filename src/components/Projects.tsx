@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Star } from 'lucide-react';
 import type { Project } from '../types';
@@ -43,7 +43,7 @@ const projects: Project[] = [
     description: 'Developed a simple mobile game for Android.',
     tech: ['Kotlin', 'XML', 'Android Studio'],
     github: 'https://github.com/Pawarasasmina/LaneRunner.git',
-    image:lanerunner,
+    image: lanerunner,
   },
   {
     title: 'Address Book',
@@ -77,9 +77,19 @@ const projects: Project[] = [
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   // Show only the first 3 projects initially, show all if "Show More" is clicked
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
+  // Auto-sliding functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length); // Loop back to 0 when it reaches the end
+    }, 3000); // Change project every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
@@ -179,8 +189,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
           >
-            <Github className="w-5 h-5 mr-1" />
-            Code
+            <Github className="w-5 h-5" />
+            <span className="ml-2">GitHub</span>
           </motion.a>
         </div>
       </div>

@@ -34,26 +34,47 @@ export default function Education() {
   return (
     <section className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100 }}
-            className="inline-block p-2 bg-primary-light/10 dark:bg-primary-dark/10 rounded-lg mb-4"
-          >
-            <GraduationCap className="w-6 h-6 text-primary-light dark:text-primary-dark" />
-          </motion.div>
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here is a summary of my academic qualifications and achievements.
-          </p>
-        </motion.div>
+      <motion.div
+  initial={{ opacity: 0, y: 100 }} // Start below the screen
+  whileInView={{ opacity: 1, y: 0 }} // Rise into place
+  viewport={{ once: true }}
+  transition={{ type: "spring", stiffness: 50, damping: 10 }}
+  className="text-center mb-16"
+>
+  {/* Animated Icon */}
+  <motion.div
+    initial={{ opacity: 0, y: 150 }} // Start lower for a more dramatic effect
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 100, damping: 8, delay: 0.2 }}
+    className="inline-block p-2 bg-primary-light/10 dark:bg-primary-dark/10 rounded-lg mb-4"
+  >
+    <GraduationCap className="w-6 h-6 text-primary-light dark:text-primary-dark" />
+  </motion.div>
+
+  {/* Animated Title */}
+  <motion.h2
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 100, damping: 8, delay: 0.4 }}
+    className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+  >
+    Education
+  </motion.h2>
+
+  {/* Animated Description */}
+  <motion.p
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 100, damping: 8, delay: 0.6 }}
+    className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+  >
+    Here is a summary of my academic qualifications and achievements.
+  </motion.p>
+</motion.div>
+
         
         <div className="space-y-8">
           {educationData.map((item, index) => (

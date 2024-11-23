@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { Link } from 'react-scroll'; 
 import sign from '../assets/sign2.png';
 
 interface SocialLinkProps {
@@ -15,42 +15,88 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuItemClick = () => {
-    setIsOpen(false); // Close the menu
+    setIsOpen(false); // Close the menu on item click
   };
 
   return (
-    <motion.header className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
-    <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between items-center h-16">
-      <motion.div
-  initial={{ x: -50, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.5 }}
-  className="text-xl font-bold"
->
-  <motion.img
-    whileHover={{ scale: 1.05 }}
-    src={sign}// Replace with the path to your image
-    alt="Your Signature Photo"
-    className="w-20 rounded-full" // Adjust the size and shape as needed
-  />
-</motion.div>
+    <motion.header
+      className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-xl font-bold"
+          >
+            <motion.img
+              whileHover={{ scale: 1.1 }}
+              src={sign}
+              alt="Your Signature Photo"
+              className="w-20 rounded-full cursor-pointer"
+            />
+          </motion.div>
 
-
-        {/* Desktop Navigation */}
-        <motion.div 
+          {/* Desktop Navigation */}
+          <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="hidden md:flex items-center space-x-6"
+            className="hidden md:flex items-center space-x-8"
           >
             {/* Add links to sections */}
-            <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">About</a>
-            <a href="#education" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Education</a>
-            <a href="#skills" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Skills</a>
-            <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Projects</a>
-            <a href="#Services" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Services </a>
-            <a href="#Contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">Contact</a>
+            <motion.a
+              href="#about"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              About
+            </motion.a>
+            <motion.a
+              href="#education"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              Education
+            </motion.a>
+            <motion.a
+              href="#skills"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              Skills
+            </motion.a>
+            <motion.a
+              href="#projects"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              Projects
+            </motion.a>
+            <motion.a
+              href="#services"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              Services
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              Contact
+            </motion.a>
 
             <ThemeToggle />
             <SocialLink href="https://github.com/Pawarasasmina" icon={<Github />} label="GitHub" />
@@ -62,7 +108,7 @@ export default function Header() {
           <div className="md:hidden flex items-center space-x-4">
             <ThemeToggle />
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -74,12 +120,12 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <motion.div
-          initial={false}
-          animate={{ height: isOpen ? "auto" : 0 }}
+          initial={{ height: 0 }}
+          animate={{ height: isOpen ? 'auto' : 0 }}
+          transition={{ type: 'spring', stiffness: 300 }}
           className="md:hidden overflow-hidden bg-opacity-90 bg-gray-800 dark:bg-gray-900 rounded-lg"
         >
           <div className="py-6 space-y-6 text-white flex flex-col items-center justify-center">
-            {/* Page Sections in Mobile View with Increased Spacing */}
             <Link
               to="about"
               smooth={true}
@@ -117,16 +163,16 @@ export default function Header() {
               Projects
             </Link>
             <Link
-              to="Services"
+              to="services"
               smooth={true}
               duration={500}
               className="block text-xl hover:text-primary-light dark:hover:text-primary-dark"
               onClick={handleMenuItemClick}
             >
-              Services We Provide
+              Services
             </Link>
             <Link
-              to="Contact"
+              to="contact"
               smooth={true}
               duration={500}
               className="block text-xl hover:text-primary-light dark:hover:text-primary-dark"
@@ -134,9 +180,9 @@ export default function Header() {
             >
               Contact
             </Link>
-  
+
             {/* Social Links Displayed Horizontally with Extra Space */}
-            <div className="flex space-x-6 mt-6">
+            <div className="flex space-x-4 mt-6">
               <MobileSocialLink href="https://github.com/Pawarasasmina" icon={<Github />} label="GitHub" />
               <MobileSocialLink href="https://linkedin.com/in/pawarasasmina" icon={<Linkedin />} label="LinkedIn" />
               <MobileSocialLink href="mailto:pawarasasmina1@gmail.com" icon={<Mail />} label="Email" />

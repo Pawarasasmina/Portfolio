@@ -7,16 +7,44 @@ export default function WhoAmI() {
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Who Am I?
-          </h2>
-        </motion.div>
+      <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+  className="text-center mb-16"
+>
+  <motion.h2
+    className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={{
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.1,
+        },
+      },
+    }}
+  >
+    {'Who Am I?'.split('').map((char, index) => (
+      <motion.span
+        key={index}
+        className="inline-block"
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ type: 'spring', stiffness: 150, damping: 8 }}
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </motion.span>
+    ))}
+  </motion.h2>
+</motion.div>
+
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div
