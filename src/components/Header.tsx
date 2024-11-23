@@ -182,7 +182,7 @@ export default function Header() {
             </Link>
 
             {/* Social Links Displayed Horizontally with Extra Space */}
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-2 mt-6">
               <MobileSocialLink href="https://github.com/Pawarasasmina" icon={<Github />} label="GitHub" />
               <MobileSocialLink href="https://linkedin.com/in/pawarasasmina" icon={<Linkedin />} label="LinkedIn" />
               <MobileSocialLink href="mailto:pawarasasmina1@gmail.com" icon={<Mail />} label="Email" />
