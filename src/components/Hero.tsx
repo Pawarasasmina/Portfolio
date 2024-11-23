@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Database, Globe, Sparkles } from 'lucide-react';
-import photo from '../assets/PAWARA1.png';
-import photo2 from '../assets/photo2.png';
+import photo2 from '../assets/PAWARA1.png';
+import photo from '../assets/mine.png';
 import cv from '../assets/MY_CV_FINAL.pdf';
 
 interface AnimatedSkillProps {
