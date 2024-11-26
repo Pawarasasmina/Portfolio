@@ -42,67 +42,32 @@ export default function Header() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="hidden md:flex items-center space-x-8"
-          >
-            {/* Add links to sections */}
-            <motion.a
-              href="#about"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              About
-            </motion.a>
-            <motion.a
-              href="#education"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              Education
-            </motion.a>
-            <motion.a
-              href="#skills"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              Skills
-            </motion.a>
-            <motion.a
-              href="#projects"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              Projects
-            </motion.a>
-            <motion.a
-              href="#services"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              Services
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              Contact
-            </motion.a>
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ staggerChildren: 0.2 }}
+  className="hidden md:flex items-center space-x-8"
+>
+  {/* Add links to sections */}
+  {["about", "education", "skills", "projects", "services", "contact"].map((section, index) => (
+    <motion.a
+      key={section}
+      href={`#${section}`}
+      className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark text-lg font-medium"
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: index * 0.2, type: "spring", stiffness: 200 }}
+    >
+      {section.charAt(0).toUpperCase() + section.slice(1)}
+    </motion.a>
+  ))}
 
-            <ThemeToggle />
-            <SocialLink href="https://github.com/Pawarasasmina" icon={<Github />} label="GitHub" />
-            <SocialLink href="https://linkedin.com/in/pawarasasmina" icon={<Linkedin />} label="LinkedIn" />
-            <SocialLink href="mailto:pawarasasmina1@gmail.com" icon={<Mail />} label="Email" />
-          </motion.div>
+  <ThemeToggle />
+  <SocialLink href="https://github.com/Pawarasasmina" icon={<Github />} label="GitHub" />
+  <SocialLink href="https://linkedin.com/in/pawarasasmina" icon={<Linkedin />} label="LinkedIn" />
+  <SocialLink href="mailto:pawarasasmina1@gmail.com" icon={<Mail />} label="Email" />
+</motion.div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
