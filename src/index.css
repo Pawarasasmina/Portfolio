@@ -20,4 +20,9 @@
   .btn-primary {
     @apply bg-primary-light dark:bg-primary-dark text-white hover:bg-blue-700 dark:hover:bg-blue-300;
   }
+ .active-dot {
+  @apply bg-primary-light dark:bg-primary-dark scale-150;
+}
+
+
 }
