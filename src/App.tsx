@@ -1,4 +1,6 @@
 import React from "react";
+import { FaUser, FaGraduationCap, FaCode, FaProjectDiagram, FaTools, FaEnvelope } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Header from './components/Header';
@@ -27,18 +29,26 @@ function App() {
           <Hero />
         </motion.section>
 
-        {/* Smooth Scrolling Navigation Links */}
-        <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex space-x-4">
-  {["about", "education", "skills", "projects", "services", "contact"].map((id) => (
+        <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex space-x-6 bg-white dark:bg-gray-800 p-4 rounded-full shadow-lg">
+  {[
+    { id: "about", icon: <FaUser /> },
+    { id: "education", icon: <FaGraduationCap /> },
+    { id: "skills", icon: <FaCode /> },
+    { id: "projects", icon: <FaProjectDiagram /> },
+    { id: "services", icon: <FaTools /> },
+    { id: "contact", icon: <FaEnvelope /> },
+  ].map(({ id, icon }) => (
     <Link
       key={id}
       to={id}
       smooth={true}
       duration={500}
       spy={true}
-      activeClass="active-dot"
-      className="cursor-pointer bg-gray-300 dark:bg-gray-700 w-3 h-3 rounded-full transition-all duration-200 hover:scale-125"
-    />
+      activeClass="active-icon"
+      className="cursor-pointer text-gray-500 dark:text-gray-300 text-2xl transition-all duration-200 hover:scale-125"
+    >
+      {icon}
+    </Link>
   ))}
 </nav>
 

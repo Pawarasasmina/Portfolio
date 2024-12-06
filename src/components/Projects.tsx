@@ -8,14 +8,15 @@ import pixelplaza from '../assets/pixelplasa.png';
 import healthcare from '../assets/healthcare.png';
 import highway from '../assets/highway.png';
 import lanerunner from '../assets/lanerunner.png';
+import portfolio from '../assets/portfolio.png';
 
 const projects: Project[] = [
   {
-    title: 'Pixel Plaza',
-    description: 'Developed a web-based shopping mall system to improve the shopping experience beyond a normal e-commerce platform.',
-    tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JWT', 'Bcrypt', 'JavaScript'],
-    github: 'https://github.com/Pawarasasmina/Pixel-Plaza---Online-Shopping-Mall.git',
-    image: pixelplaza,
+    title: 'Portfolio',
+    description: 'Developed a responsive animative portfolio for showcase my own works',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
+    github: 'https://github.com/Pawarasasmina/Portfolio.git',
+    image: portfolio,
   },
   {
     title: 'Online Healthcare System',
@@ -30,6 +31,13 @@ const projects: Project[] = [
     tech: ['Flutter', 'Dart', 'Android Studio'],
     github: 'https://github.com/Pawarasasmina/Path-Finder.git',
     image: pathfinder,
+  },
+  {
+    title: 'Pixel Plaza',
+    description: 'Developed a web-based shopping mall system to improve the shopping experience beyond a normal e-commerce platform.',
+    tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JWT', 'Bcrypt', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Pixel-Plaza---Online-Shopping-Mall.git',
+    image: pixelplaza,
   },
   {
     title: 'Online Seat Booking System',
