@@ -9,6 +9,9 @@ import healthcare from '../assets/healthcare.png';
 import highway from '../assets/highway.png';
 import lanerunner from '../assets/lanerunner.png';
 import portfolio from '../assets/portfolio.png';
+import dilubeats from '../assets/dilubeats.png';
+import job from '../assets/job.jpeg';
+import tailorshop from '../assets/tailorshop.png';
 
 const projects: Project[] = [
   {
@@ -47,6 +50,20 @@ const projects: Project[] = [
     image: highway,
   },
   {
+    title: 'Singer Website',
+    description: 'Developed a responsive animative website for Sri Lankan singer',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Web-site-for-singer.git',
+    image: dilubeats,
+  },
+  {
+    title: 'Tailor Shop Website',
+    description: 'Developed a responsive animative website for tailorshop (real lworld customer) on customer requirements',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Sisira_Tailors.git',
+    image: tailorshop,
+  },
+  {
     title: 'Lane Runner',
     description: 'Developed a simple mobile game for Android.',
     tech: ['Kotlin', 'XML', 'Android Studio'],
@@ -59,6 +76,13 @@ const projects: Project[] = [
     tech: ['Kotlin', 'XML', 'SQLite', 'Android Studio'],
     github: 'https://github.com/Pawarasasmina/Address-Book.git',
     image: adressbook,
+  },
+  {
+    title: 'Job Portal',
+    description: 'Online carrer supplying and applying website with front and back-end interactions.',
+    tech: ['PHP', 'HTML', 'JavaScript', 'CSS'],
+    github: 'https://github.com/Pawarasasmina/Job-Portal.git',
+    image: job,
   },
   {
     title: 'Sky-On-Eye',
