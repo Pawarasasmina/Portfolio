@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Code2, Database, Globe, Sparkles } from 'lucide-react';
 import photo2 from '../assets/PAWARA1.png';
 import photo from '../assets/mine.png';
-import cv from '../assets/MY_CV.pdf';
+import cv from '../assets/Pawara-CV.pdf';
 
 interface AnimatedSkillProps {
   icon: React.ReactNode;
