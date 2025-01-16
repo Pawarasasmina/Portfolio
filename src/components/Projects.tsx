@@ -12,6 +12,7 @@ import portfolio from '../assets/portfolio.png';
 import dilubeats from '../assets/dilubeats.png';
 import job from '../assets/job.jpeg';
 import tailorshop from '../assets/tailorshop.png';
+import company from '../assets/company.png';
 
 const projects: Project[] = [
   {
@@ -27,6 +28,20 @@ const projects: Project[] = [
     tech: ['MERN Stack', 'Vite', 'Tailwind CSS', 'JavaScript'],
     github: 'https://github.com/Pawarasasmina/Smart_HealthCare_System.git',
     image: healthcare,
+  },
+  {
+    title: 'Singer Website',
+    description: 'Developed a responsive animative website for Sri Lankan singer',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Web-site-for-singer.git',
+    image: dilubeats,
+  },
+  {
+    title: 'Company Website',
+    description: 'Developed a responsive animative company landing webpage for Sri Lankan software company',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/neuriOx-company_portfolio',
+    image: company,
   },
   {
     title: 'Path Finder',
@@ -49,13 +64,7 @@ const projects: Project[] = [
     github: 'https://github.com/Pawarasasmina/Online-seat-booking-system.git',
     image: highway,
   },
-  {
-    title: 'Singer Website',
-    description: 'Developed a responsive animative website for Sri Lankan singer',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
-    github: 'https://github.com/Pawarasasmina/Web-site-for-singer.git',
-    image: dilubeats,
-  },
+  
   {
     title: 'Tailor Shop Website',
     description: 'Developed a responsive animative website for tailorshop (real lworld customer) on customer requirements',
