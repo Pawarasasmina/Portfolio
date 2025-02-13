@@ -15,12 +15,30 @@ import tailorshop from '../assets/tailorshop.png';
 import company from '../assets/company.png';
 
 const projects: Project[] = [
+ 
   {
-    title: 'Portfolio',
-    description: 'Developed a responsive animative portfolio for showcase my own works',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
-    github: 'https://github.com/Pawarasasmina/Portfolio.git',
-    image: portfolio,
+    title: 'DILU Beats - Singer Website',
+    description: 'Developed a responsive animative website for Sri Lankan singer',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Web-site-for-singer.git',
+    website: 'https://dilubeats.com/',
+    image: dilubeats,
+  },
+  {
+    title: 'Company Website',
+    description: 'Developed a responsive animative company landing webpage for Sri Lankan software company',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/neuriOx-company_portfolio',
+    website: 'https://neurioxit.systems/',
+    image: company,
+  },
+  {
+    title: 'Tailor Shop Website',
+    description: 'Developed a responsive animative website for tailorshop (real lworld customer) on customer requirements',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    github: 'https://github.com/Pawarasasmina/Sisira_Tailors.git',
+    website: 'https://sisira-tailors.vercel.app/',
+    image: tailorshop,
   },
   {
     title: 'Online Healthcare System',
@@ -29,20 +47,8 @@ const projects: Project[] = [
     github: 'https://github.com/Pawarasasmina/Smart_HealthCare_System.git',
     image: healthcare,
   },
-  {
-    title: 'Singer Website',
-    description: 'Developed a responsive animative website for Sri Lankan singer',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
-    github: 'https://github.com/Pawarasasmina/Web-site-for-singer.git',
-    image: dilubeats,
-  },
-  {
-    title: 'Company Website',
-    description: 'Developed a responsive animative company landing webpage for Sri Lankan software company',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
-    github: 'https://github.com/Pawarasasmina/neuriOx-company_portfolio',
-    image: company,
-  },
+ 
+ 
   {
     title: 'Path Finder',
     description: 'A cross-platform mobile application to alleviate urban traffic congestion.',
@@ -65,13 +71,7 @@ const projects: Project[] = [
     image: highway,
   },
   
-  {
-    title: 'Tailor Shop Website',
-    description: 'Developed a responsive animative website for tailorshop (real lworld customer) on customer requirements',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
-    github: 'https://github.com/Pawarasasmina/Sisira_Tailors.git',
-    image: tailorshop,
-  },
+ 
   {
     title: 'Lane Runner',
     description: 'Developed a simple mobile game for Android.',
@@ -233,6 +233,19 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             <Github className="w-5 h-5" />
             <span className="ml-2">GitHub</span>
           </motion.a>
+          {project.website && (
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+            >
+              <ExternalLink className="w-5 h-5" />
+              <span className="ml-2">View Page</span>
+            </motion.a>
+          )}
         </div>
       </div>
     </motion.div>
