@@ -4,6 +4,7 @@ import { Code2, Database, Globe, Sparkles } from 'lucide-react';
 import photo2 from '../assets/PAWARA1.png';
 import photo from '../assets/mine.png';
 import cv from '../assets/Pawara-CV.pdf';
+import SplashCursor from './SplashCursor';
 
 interface AnimatedSkillProps {
   icon: React.ReactNode;
@@ -32,7 +33,9 @@ const itemVariants = {
 
 export default function Hero() {
   return (
+    
     <section className="min-h-screen pt-16 bg-gradient-to-b from-white via-white to-gray-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 relative overflow-hidden transition-colors duration-200">
+      <SplashCursor />
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(5)].map((_, i) => (
           <motion.div
