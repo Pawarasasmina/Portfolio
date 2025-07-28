@@ -13,11 +13,15 @@ import WhoAmI from './components/WhoAmI';
 import Contact from './components/Contact';
 import Services from './components/services';
 
+
+
 function App() {
   return (
+
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
       {/* Header */}
       <Header />
+      
 
       <main>
         {/* Hero Section */}
@@ -51,6 +55,7 @@ function App() {
     </Link>
   ))}
 </nav>
+
 
 
 
